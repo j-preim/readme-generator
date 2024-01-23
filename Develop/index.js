@@ -12,19 +12,8 @@ inquirer
     },
     {
       type: "input",
-      message: "What was your motivation?",
-      name: "motivation",
-    },
-    {
-      type: "input",
-      message:
-        'Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")',
+      message: "Why did you build this project? What problem does it solve?",
       name: "whyBuild",
-    },
-    {
-      type: "input",
-      message: "What problem does it solve?",
-      name: "problemSolved",
     },
     {
       type: "input",
@@ -33,32 +22,44 @@ inquirer
     },
     {
       type: "input",
-      message:
-        "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
+      message: "What are the steps required to install your project?",
       name: "installationSteps",
     },
     {
       type: "input",
-      message:
-        "Provide instructions and examples for use. Include screenshots as needed.",
+      message: "Provide instructions and examples for use:",
       name: "instructions",
     },
     {
-      type: "input",
-      message:
-        "List your collaborators, if any, with links to their GitHub profiles.",
-      name: "credits",
+      type: "list",
+      message: "Select a license:",
+      choices: [
+        {value: "Apache License"},
+        {value: "BSD License"},
+        {value: "Creative Commons License"},
+        {value: "GNU General Public License"},
+        {value: "MIT License"},
+      ],
+      name: "license",
     },
     {
       type: "input",
-      message:
-        "What is your GitHub username?",
+      message: "List your collaborators, if any:",
+      name: "contributing",
+    },
+    {
+      type: "input",
+      message: "What are the testing steps for this project?",
+      name: "tests",
+    },
+    {
+      type: "input",
+      message: "What is your GitHub username?",
       name: "gitHub",
     },
     {
       type: "input",
-      message:
-        "What is your email address?",
+      message: "What is your email address?",
       name: "email",
     },
   ])
@@ -69,13 +70,21 @@ inquirer
       `
 # ${response.projectTitle}
 
+![License](${generateBadgeURL(response.license)})
+
 ## Description
 
-${response.motivation}
+${response.whyBuild}
+${response.whatLearned}
 
 ## Table of Contents
 
-
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -87,15 +96,19 @@ ${response.instructions}
 
 ## License
 
+This project is licensed under the ${response.license}.
+
 ## Contributing
 
-${response.credits}
+${response.contributing}
 
 ## Tests
 
+${response.tests}
+
 ## Questions
 
-GitHub: ${response.gitHub}
+GitHub profile: [www.github.com/${response.gitHub}/](https://www.github.com/${response.gitHub}/)
 
 Email address: ${response.email}
 
@@ -105,6 +118,12 @@ Feel free to send any additional questions to the e-mail address shown above.
       (err) => (err ? console.error(err) : console.log("Success!"))
     )
   );
+
+function generateBadgeURL (license) {
+  let formattedLicense = license.replaceAll(" ", "%20");
+  let badgeURL = `https://img.shields.io/badge/${formattedLicense}-8A2BE2`;
+  return badgeURL;
+}
 
 // TODO: Create a function to initialize app
 function init() {}
