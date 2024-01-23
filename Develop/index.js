@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -67,63 +68,10 @@ inquirer
     // TODO: Create a function to write README file
     fs.writeFile(
       "generatedReadme.md",
-      `
-# ${response.projectTitle}
-
-![License](${generateBadgeURL(response.license)})
-
-## Description
-
-${response.whyBuild}
-${response.whatLearned}
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-
-${response.installationSteps}
-
-## Usage
-
-${response.instructions}
-
-## License
-
-This project is licensed under the ${response.license}.
-
-## Contributing
-
-${response.contributing}
-
-## Tests
-
-${response.tests}
-
-## Questions
-
-GitHub profile: [www.github.com/${response.gitHub}/](https://www.github.com/${response.gitHub}/)
-
-Email address: ${response.email}
-
-Feel free to send any additional questions to the e-mail address shown above.
-
-`,
+      generateMarkdown(response),
       (err) => (err ? console.error(err) : console.log("Success!"))
     )
   );
-
-function generateBadgeURL (license) {
-  let formattedLicense = license.replaceAll(" ", "%20");
-  let badgeURL = `https://img.shields.io/badge/${formattedLicense}-8A2BE2`;
-  return badgeURL;
-}
 
 // TODO: Create a function to initialize app
 function init() {}
