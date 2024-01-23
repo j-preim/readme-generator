@@ -7,7 +7,7 @@ The purpose of this project is to create a command-line application that dynamic
 
 ## Installation
 
-A video showing the functionality of this project can be found here: https://j-preim.github.io/readme-generator/
+A video showing the functionality of this project can be found here: https://drive.google.com/file/d/1BbmsIVH6jrPJy967zZqCK_OT4h17Lc8-/view
 
 ## Usage
 

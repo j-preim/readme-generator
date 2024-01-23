@@ -23,7 +23,7 @@
   
   ## Usage
   
-  This project requires generating positive thoughts towards any problem you encounter. 
+  This project requires generating positive thoughts towards any problem you encounter.
   
   ## License
   
