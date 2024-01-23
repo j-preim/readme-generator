@@ -1,12 +1,12 @@
 
-  # sldkfjs
+  # Test Project
   
-  ![License](https://img.shields.io/badge/BSD%20License-8A2BE2)
+  ![License](https://img.shields.io/badge/Creative%20Commons%20License-8A2BE2)
   
   ## Description
   
-  lsakdjfsklj
-  sladjfsdklfj
+  This project was built to save the world. It solves all problems.
+  I learned that all problems can be solved very easily.
   
   ## Table of Contents
   
@@ -19,29 +19,29 @@
   
   ## Installation
   
-  lskdjfslkdfj
+  First, download the Inquirer package. Second, save the world.
   
   ## Usage
   
-  lskdjfsdlakjf
+  This project requires generating positive thoughts towards any problem you encounter. 
   
   ## License
   
-  This project is licensed under the [BSD License](https://choosealicense.com/licenses/bsd-3-clause/).
+  This project is licensed under the [Creative Commons License](https://choosealicense.com/licenses/cc0-1.0/).
   
   ## Contributing
   
-  lskdjfks
+  My dogs, Percy and Pronto.
   
   ## Tests
   
-  lkasdjfslkfj
+  First, have fun. Second, save the world.
   
   ## Questions
   
-  GitHub profile: [www.github.com/laskdjfslkj/](https://www.github.com/laskdjfslkj/)
+  GitHub profile: [www.github.com/j-preim/](https://www.github.com/j-preim/)
   
-  Email address: laskdjfsdlkfj
+  Email address: test@test.com
   
   Feel free to send any additional questions to the e-mail address shown above.
   
